@@ -1,10 +1,17 @@
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Username</span>
+          </div>
+          <input type="text" class="form-control" [(ngModel)]="player.nome" name="nome" aria-label="Exemplo do tamanho do input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <button class="btn btn-primary btn-sm" (click)="login()">loguin</button>
+
         <ul class="list-group">
             <li class="list-group-item">Nome</li>
             <li class="list-group-item" *ngFor="let player of players | async">{{player.nome}}</li>
           </ul>  
 
-          <button (onclick)="onclick()">Add</button>
     </div>
   </div>

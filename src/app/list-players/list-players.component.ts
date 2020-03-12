@@ -12,6 +12,7 @@ export class ListPlayersComponent implements OnInit {
 
   player : Player
   players : Observable<any>
+  nome : string
 
   constructor(private playerService : PlayerService) { }
 
@@ -19,10 +20,10 @@ export class ListPlayersComponent implements OnInit {
     this.players = this.playerService.getAll()
   }
 
-  onclick(){
-    this.player = new Player
-    this.player.nome = "aaa"
-    this.player.status = 'BBB'
+  login(){
+    this.player = new Player()
+    this.player.nome = this.nome
     this.playerService.insert(this.player)
   }
+
 }
