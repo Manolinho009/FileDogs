@@ -13,12 +13,14 @@ import { AngularFireStorageModule, StorageBucket } from "@angular/fire/storage";
 import { environment } from 'src/environments/environment';
 import { ListPlayersComponent } from './list-players/list-players.component';
 import { SalasComponent } from './salas/salas.component';
+import { PrincipalComponent } from './principal/principal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListPlayersComponent,
-    SalasComponent
+    SalasComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,

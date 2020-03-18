@@ -27,7 +27,7 @@ export class PlayerService {
   getAll(){
     return this.db.list('sala/players').snapshotChanges().pipe(
       map(changes => {
-        return changes.map(c =>({ key : c.payload.key, ...c.payload.val()}))
+        return changes.map(c =>({ key : c.payload.key, ...(c.payload.val() as {})}))
       })
     )
   }
