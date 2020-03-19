@@ -1,42 +1,26 @@
 
-                
-<div class=" pos-f-t">
-    <div class="collapse " id="navbarToggleExternalContent">
-        <div class="bg-dark p-4">
-            <h5 class="text-white h4">Eventos</h5>
-        </div>
+<div id="wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a>
+                   Players
+                </a>
+            </li>
+            <li *ngFor="let player of players | async">
+                <a>{{player.nome}}</a>
+            </li>
+        </ul>
     </div>
+    <img src="https://cdn.minhaconexao.com.br/alternative/internet_lenta_retangulo.gif" class="rounded mx-auto d-block" alt="...">
 
-    <nav class="navbar fixed-top navbar-light" style="background-color: #e3f2fd;">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </nav>
+    <!-- /#sidebar-wrapper -->
+    <app-dado></app-dado>
+
+    <a href="sala/{{sala.id}}/config" class="float">
+        <i class="fa fa-plus my-float"></i>
+    </a>
+
 </div>
 
-<div class="container clearfix">
-    <div class="row ">
-    <div class="col-sm-2 float-left ml-0">
-        <div class="jumbotron jumbotron-fluid ">
-            <div class="container">
-                <h6 class="display-6">Players</h6>
-                </div>
-                <ul class="list-group">
-                    <li class="list-group-item" *ngFor="let player of players | async">{{player.nome}}</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="col-sm">
-            <div class="jumbotron jumbotron-fluid" style="background-color: white;">
-
-            </div>
-        </div>
-
-        <div class="col-sm-2">
-            <div class="jumbotron jumbotron-fluid">
-                
-            </div>
-        </div>
-    </div>
-</div>

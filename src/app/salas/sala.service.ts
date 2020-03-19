@@ -19,7 +19,7 @@ export class SalaService {
   }
 
   insertPlayer(player: Player, sala: Sala){
-    this.db.list('salas/'+sala.id +'/players').push(player)
+    this.db.list('salas/'+sala.id+'/players').push(player)
     .then((result : any ) =>{
       console.log(result.key);
     })

@@ -5,5 +5,7 @@ export class Sala {
     nome:string
     numeroPlayers: number
     players: Observable<Player>
-    id: any
+    id: string
+    fundoUrl: string
+    fundoId: string
 }

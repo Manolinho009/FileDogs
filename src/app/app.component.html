@@ -6,7 +6,11 @@
   </a>
 </nav>
 
-<app-salas></app-salas>
-<app-list-players></app-list-players>
 
-<app-principal></app-principal>
+<!-- <app-salas></app-salas>
+<app-list-players></app-list-players> -->
+
+<div >
+  <!-- [@routeAnimation]="getAnimationData(routerOutlet)" -->
+  <router-outlet #routerOutlet="outlet"></router-outlet>
+</div>

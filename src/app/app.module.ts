@@ -14,13 +14,17 @@ import { environment } from 'src/environments/environment';
 import { ListPlayersComponent } from './list-players/list-players.component';
 import { SalasComponent } from './salas/salas.component';
 import { PrincipalComponent } from './principal/principal.component';
+import { DadoComponent } from './dado/dado.component';
+import { ConfigComponent } from './config/config.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListPlayersComponent,
     SalasComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    DadoComponent,
+    ConfigComponent
   ],
   imports: [
     BrowserModule,

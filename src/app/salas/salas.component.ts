@@ -33,8 +33,9 @@ export class SalasComponent implements OnInit {
   //   this.playerService.insert(this.player)
   // }
 
-  login(){
-    this.sala.id = "teste1"
+  login(key:any){  
+    this.sala.id = key
+    console.log(key)
     this.salaService.insertPlayer(this.player,this.sala)
     console.log("pipop"+this.player.nome)
     this.player = new Player()

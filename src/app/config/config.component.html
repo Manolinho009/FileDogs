@@ -1,0 +1,19 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Configuraçoes</h1>
+      <ul>
+          <li>
+              <h6>Alterar Fundo</h6>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                </div>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" (change)="enviarImg($event)" accept=".png,.jpg" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                </div>
+              </div>
+          </li>
+      </ul>
+    </div>
+  </div>
