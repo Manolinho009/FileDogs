@@ -9,10 +9,9 @@ import { ConfigComponent } from './config/config.component';
 const routes: Routes = [
   { path: 'salas' , component: SalasComponent},
   { path: 'home' , component: ListPlayersComponent},
-  { path: 'sala/:id' , component: PrincipalComponent},
-  { path: 'sala/:id/config' , component: ConfigComponent},
+  { path: 'player/:play/sala/:sala' , component: PrincipalComponent},
   { path: '' , 
-  redirectTo: 'home',
+  redirectTo: 'salas',
   pathMatch: 'full'}
 ];
 

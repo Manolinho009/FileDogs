@@ -22,7 +22,12 @@ export class SalaService {
     this.db.list('salas/'+sala.id+'/players').push(player)
     .then((result : any ) =>{
       console.log(result.key);
+      return result.key
     })
+  }
+
+  get(sala: Sala){
+    return this.db.object('salas/'+sala.id).valueChanges()
   }
 
   update(sala : Sala, key : string){

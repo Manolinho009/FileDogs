@@ -7,8 +7,7 @@
           </div>
 
         <ul class="list-group"  style="overflow: scroll; max-height: 200pt;">
-            <a class="list-group-item" (click)="login(sala.key)" href="sala/{{sala.key}}" *ngFor="let sala of salas | async">{{sala.nome}}</a>
-          </ul>  
-
+            <a class="list-group-item" (click)="login(sala.key)" href="player/{{player.id}}/sala/{{sala.key}}"  *ngFor="let sala of salas | async" >{{sala.nome}}</a>
+        </ul>  
     </div>
   </div>

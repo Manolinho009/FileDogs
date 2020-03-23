@@ -42,6 +42,7 @@ export class ConfigComponent implements OnInit {
         this.imageService.insert(this.imagem)
       })  
     })
+    
   }
 
 

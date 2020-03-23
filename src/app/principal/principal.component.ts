@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { PlayerService } from '../list-players/player.service';
 import {Router, Resolve,RouterStateSnapshot,ActivatedRouteSnapshot, ActivatedRoute}from '@angular/router';
 import { Sala } from '../salas/sala';
+import { SalaService } from '../salas/sala.service';
 
 @Component({
   selector: 'app-principal',
@@ -17,13 +18,15 @@ export class PrincipalComponent implements OnInit {
   nome : string
   key : string = ''
   sala: Sala
-  constructor(private playerService: PlayerService,private route: ActivatedRoute){ }
+  imgUrl: string = ''
+  constructor(private playerService: PlayerService,private route: ActivatedRoute,private salaService : SalaService){ }
 
   ngOnInit() {
     this.player = new Player()
     this.sala = new Sala()
-    this.sala.id = this.route.snapshot.paramMap.get('id')
+    this.sala.id = this.route.snapshot.paramMap.get('sala')
     console.log(this.sala.id)
+    this.imgUrl = this.sala.fundoUrl
     this.players = this.playerService.getAll(this.sala.id)
   }
 

@@ -15,6 +15,7 @@ export class PlayerService {
     this.db.list('salas/players').push(player)
     .then((result : any ) =>{
       console.log(result.key);
+      
     })
   }
 
