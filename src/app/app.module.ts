@@ -16,6 +16,7 @@ import { SalasComponent } from './salas/salas.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { DadoComponent } from './dado/dado.component';
 import { ConfigComponent } from './config/config.component';
+import { RegistrosComponent } from './registros/registros.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ConfigComponent } from './config/config.component';
     SalasComponent,
     PrincipalComponent,
     DadoComponent,
-    ConfigComponent
+    ConfigComponent,
+    RegistrosComponent
   ],
   imports: [
     BrowserModule,

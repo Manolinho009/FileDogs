@@ -4,14 +4,16 @@ import { ListPlayersComponent } from './list-players/list-players.component';
 import { SalasComponent } from './salas/salas.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { ConfigComponent } from './config/config.component';
+import { RegistrosComponent } from './registros/registros.component';
 
 
 const routes: Routes = [
   { path: 'salas' , component: SalasComponent},
   { path: 'home' , component: ListPlayersComponent},
   { path: 'player/:play/sala/:sala' , component: PrincipalComponent},
+  { path: 'registro' , component: RegistrosComponent},
   { path: '' , 
-  redirectTo: 'salas',
+  redirectTo: 'registro',
   pathMatch: 'full'}
 ];
 
