@@ -1,0 +1,63 @@
+
+  <div class="card x-6" style="width: 30rem;">
+    <div class="card-body">
+        <div class="input-group">
+            <div class="input-group-append">
+            <span class="input-group-text">Nota1</span>
+        </div>
+        <input id="nota1" max="10" min="0" type="number" (input)="nota1 = $event.target.value" class="form-control">
+        </div>
+
+        <div class="input-group">
+            <div class="input-group-append">
+            <span class="input-group-text">Nota2</span>
+        </div>
+        <input type="number" max="10" min="0"(input)="nota2 = $event.target.value"  class="form-control">
+        </div>
+        <button type="button" (click)="calcularnota(nota1 ,nota2)" class="btn btn-primary">Calcular</button>
+        <span>Nota final:{{notafinal}}          Status: {{status}}</span>
+    </div>
+  </div>
+
+  <div class="card x-6" style="width: 30rem;">
+    <div class="card-body">
+        <input type="number"  (input)="numero($event.target.value)"  class="form-control">
+        <div>
+            <span> {{tipo}}</span>
+        </div>
+    </div>
+  </div>
+
+  <div class="card x-6" style="width: 30rem;">
+    <div class="card-body">
+
+        <input type="number"  (input)="numero1 = $event.target.value"  class="form-control">
+        <input type="number"  (input)="numero2 = $event.target.value"  class="form-control">
+
+        <div>
+            <span>O maior é : {{numeromaior(numero1 ,numero2)}}</span>
+        </div>
+    </div>
+  </div>
+
+  <div class="card x-6" style="width: 30rem;">
+    <div class="card-body">
+
+        <input type="text"  (input)="sexo = $event.target.value"  class="form-control">
+
+        <div>
+            <span>{{sexoselector(sexo)}}</span>
+        </div>
+    </div>
+  </div>
+
+  <div class="card x-6" style="width: 30rem;">
+    <div class="card-body">
+
+        <input type="text"  (input)="idade = $event.target.value"  class="form-control">
+
+        <div>
+            <span>{{classificador(idade)}}</span>
+        </div>
+    </div>
+  </div>

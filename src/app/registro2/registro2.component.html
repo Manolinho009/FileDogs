@@ -1,0 +1,70 @@
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Tenta vc ai</h1>
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Valor 1</span>
+        </div>
+        <input type="text" (input)=" valor1 = $event.target.value" class="form-control" aria-label="Exemplo do tamanho do input" aria-describedby="inputGroup-sizing-sm">
+      </div>
+      
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Valor 2</span>
+        </div>
+        <input type="text" (input)=" valor2 = $event.target.value" class="form-control" aria-label="Exemplo do tamanho do input" aria-describedby="inputGroup-sizing-sm">
+      </div>
+      <button type="button" (click)="onClick()" class="btn btn-primary" >Salvar</button>   
+
+    </div>
+  </div>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Valor 1</th>
+        <th scope="col">Valor 2</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Nota1=<input (click)="calcular()" (input)=" nota1 = $event.target.value" type="number" class="form-control" placeholder="Usuário" aria-label="Usuário" aria-describedby="basic-addon1"></td>
+        <td>Nota2=<input (click)="calcular()" (input)=" nota2 = $event.target.value" type="number" class="form-control" placeholder="Usuário" aria-label="Usuário" aria-describedby="basic-addon1"></td>
+        <td>Media=<span>{{media}}</span></td>
+      </tr>
+
+      <tr>
+        <td>Peso=<input (click)="calcularimc()" (input)=" peso = $event.target.value" type="number" class="form-control" placeholder="Usuário" aria-label="Usuário" aria-describedby="basic-addon1"></td>
+        <td>Altura=<input (click)="calcularimc()" (input)=" altura = $event.target.value" type="number" class="form-control" placeholder="Usuário" aria-label="Usuário" aria-describedby="basic-addon1"></td>
+        <td>IMC=<span>{{imc}}</span></td>
+      </tr>
+
+      <tr *ngFor="let registro of bancos | async">
+        <td>BANCO</td>
+        <td>Agencia=<input (click)="calcularimc()" (input)=" agencia = $event.target.value" type="number" class="form-control"  aria-describedby="basic-addon1"></td>
+        <td>Conta=<input (click)="calcularimc()" (input)=" conta = $event.target.value" type="number" class="form-control"  aria-describedby="basic-addon1"></td>
+        <td>Operação=<input (click)="calcularimc()" (input)=" operacao = $event.target.value" type="number" class="form-control"  aria-describedby="basic-addon1"></td>
+        <td>Valor<input (click)="calcularimc()" (input)=" valor = $event.target.value" type="number" min="0" class="form-control"  aria-describedby="basic-addon1"></td>
+        <td> <button (click)="saque( valor,registro.valorbc)">Retirar</button> <button (click)="deposito( valor,registro.valorbc)">Depositar</button></td>
+        <td> Valor em Conta: {{registro.valorbc}}</td>
+      </tr>
+
+      <tr>
+        <td>Nome de Usuario = <input (click)="login()" (input)=" user = $event.target.value" type="text" class="form-control"  aria-describedby="basic-addon1"></td>
+        <td>Senha = <input (click)="login()" (input)=" password = $event.target.value" type="text" class="form-control"  aria-describedby="basic-addon1"></td>
+      </tr>
+
+      <tr>
+        <td>Velocidade do Carro = <input (click)="carro()" min="80" (input)=" velocidade = $event.target.value" type="number" class="form-control"  aria-describedby="basic-addon1"></td>
+        <td>R$ 80 a cada km passado</td>
+        <td>Total da multa= {{multa}}</td>
+      </tr>
+
+      <tr *ngFor="let registro of registros | async">
+        <td>Valor1 = {{registro.valor1}}</td>
+        <td>Valor2 = {{registro.valor2}}</td>
+      </tr>
+
+    </tbody>
+  </table>

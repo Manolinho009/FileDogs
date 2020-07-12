@@ -1,0 +1,197 @@
+<div class="jumbotron jumbotron-fluid">
+    
+    <div class="container ">
+        <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nome</label>
+              <input type="text" required="required" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu Nome">
+            </div>
+        
+            <div class="form-group">
+              <label for="exampleInputPassword1">Sobrenome</label>
+              <input type="text" required="required" class="form-control" id="exampleInputPassword1" placeholder="Sobrenome">
+            </div>
+        
+            <div class="form-group">
+                <label for="exampleInputPassword1">Sua idade</label>
+                <input type="number" required="required" class="form-control" id="exampleInputPassword1" placeholder="Idade">
+            </div>
+        
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+
+    </div>
+
+</div>
+
+<div class="jumbotron jumbotron-fluid bg-dark">
+    
+    <div class="container table-responsive-lg">
+        
+        <table class="table  table-bordered table-striped table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Tabela</th>
+                <th scope="col">Codigo</th>
+                <th scope="col">Procedencia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"># Norte</th>
+                <td>1</td>
+                <td>Fazenda</td>
+              </tr>
+              <tr>
+                <th scope="row"># Sul</th>
+                <td>2</td>
+                <td>Mercado</td>
+              </tr>
+              <tr>
+                <th scope="row"># Leste</th>
+                <td>3</td>
+                <td>China</td>
+              </tr>
+              <tr>
+                <th scope="row"># Oeste</th>
+                <td>4</td>
+                <td>Lugares legais</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class=" h2" id="textolegal"></div>
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <button class="btn btn-outline-secondary" (click)="procedencia()"  type="button" id="button-addon1">Enviar</button>
+            </div>
+            <input type="text" (input)=" codigo = $event.target.value" class="form-control bg-dark" placeholder="" aria-label="Codigo de produto" aria-describedby="button-addon1">
+          </div>
+
+    </div>
+</div>
+
+
+<div class="jumbotron jumbotron-fluid  ">
+    
+  <div class="container ">
+      <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Nome do Prato</label>
+            <input type="text" required="required" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome">
+          </div>
+      
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">R$</span>
+            </div>
+            <input  required="required" type="number" class="form-control" aria-label="Quantia">
+            <div class="input-group-append">
+              <span class="input-group-text">.00</span>
+            </div>
+          </div>
+          
+      
+          <div class="form-group">
+              <label for="exampleInputPassword1">Unidade de Medida</label> <br>
+              <input type="radio" required="required" value="kg" NAME="OPCAO" id="exampleInputPassword1" placeholder="Kg">Kg <br>
+              <input type="radio" required="required" value="lb" NAME="OPCAO" id="exampleInputPassword1" placeholder="Lb">Lb <br>
+              <input type="radio" required="required" value="russo" NAME="OPCAO" id="exampleInputPassword1" placeholder="фунт">фунт
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Peso</label>
+            <input type="number" required="required" class="form-control" id="exampleInputPassword1" placeholder="Peso">
+        </div>
+      
+          <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+
+  </div>
+
+</div>
+
+
+
+<div class="jumbotron jumbotron-fluid bg-dark">
+
+  <div class="container"  style="color: white;">
+    
+    <header class="mb-4">
+        <h2>Cálculo de IMC</h2>
+    </header>
+
+    <form>
+    
+      <div class="input-group mb-3">
+        <input type="number" (input)=" altura = $event.target.value" class="form-control"  placeholder="Altura" aria-label="Altura">
+  
+        <div class="input-group-prepend">
+          <span class="input-group-text">M's</span>
+        </div>
+      </div>
+
+    <div class="input-group mb-3">
+      <input type="number" (input)=" peso = $event.target.value" placeholder="Peso" class="form-control" aria-label="Peso">
+
+      <div class="input-group-prepend">
+        <span class="input-group-text">Kg</span>
+      </div>
+    </div>
+
+
+    <div class="btn-group" role="group" aria-label="Exemplo básico">
+      <button type="reset" class="btn btn-secondary">Limpar</button>
+      <button type="button" class="btn btn-secondary" (click)="imc()">Calculo</button>
+    </div>
+  </form>
+<!-- 
+    <div class="container-itens">
+      <button type="reset">Limpar</button>
+      <button type="button" onclick="conta()">Calculo</button>
+    </div> -->
+
+
+      <div class="my-4">
+        <span class="h5" id="result">Resultado: </span>
+      </div>
+
+      <table class="table table-striped table-dark">
+          
+          <tr>
+              <th scope="col">IMC</th>
+              <th scope="col">Classificação</th>
+              <th scope="col">Obesidade</th>
+          </tr>
+          <tbody>
+            <tr>
+                <td>Menor que 18,5</td>
+                <td>Magreza</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Entre 18,5 e 24,9</td>
+                <td>Normal</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Entre 25,0 e 29,9</td>
+                <td>Sobrepeso</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Entre 30,0 e 39,9</td>
+                <td>Obesidade</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Maior que 40,0</td>
+                <td>Obesidade Grave</td>
+                <td>3</td>
+            </tr>
+          </tbody>
+      </table>  
+  </div>
+
+</div>

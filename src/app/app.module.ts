@@ -17,6 +17,10 @@ import { PrincipalComponent } from './principal/principal.component';
 import { DadoComponent } from './dado/dado.component';
 import { ConfigComponent } from './config/config.component';
 import { RegistrosComponent } from './registros/registros.component';
+import { Registro2Component } from './registro2/registro2.component';
+import { IfsComponent } from './ifs/ifs.component';
+import { TesteSoftwareComponent } from './teste-software/teste-software.component';
+import { TesteSoftware2Component } from './teste-software2/teste-software2.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { RegistrosComponent } from './registros/registros.component';
     PrincipalComponent,
     DadoComponent,
     ConfigComponent,
-    RegistrosComponent
+    RegistrosComponent,
+    Registro2Component,
+    IfsComponent,
+    TesteSoftwareComponent,
+    TesteSoftware2Component
   ],
   imports: [
     BrowserModule,

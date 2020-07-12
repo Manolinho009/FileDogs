@@ -1,39 +1,54 @@
+<div class="card" style="width: 34rem;">
+  <div class="card-body">
 
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">Tenta vc ai</h1>
-      <div class="input-group input-group-sm mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Valor 1</span>
-        </div>
-        <input type="text" (input)=" valor1 = $event.target.value" class="form-control" aria-label="Exemplo do tamanho do input" aria-describedby="inputGroup-sizing-sm">
-      </div>
-      
-      <div class="input-group input-group-sm mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Valor 2</span>
-        </div>
-        <input type="text" (input)=" valor2 = $event.target.value" class="form-control" aria-label="Exemplo do tamanho do input" aria-describedby="inputGroup-sizing-sm">
-      </div>
-      <button type="button" (click)="onClick()" class="btn btn-primary" >Salvar</button>   
-
-    </div>
-  </div>
-
-
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">Valor 1</th>
-        <th scope="col">Valor 2</th>
-      </tr>
-    </thead>
-    <tbody>
-
-        <tr *ngFor="let registro of registros | async">
-        <td>Valor1 = {{registro.valor1}}</td>
-        <td>Valor2 = {{registro.valor2}}</td>
+    <h6>Novo Produto</h6>
+    <input type="text" (input)=" valor1 = $event.target.value"><span>Nome</span>
+    <input type="number" (input)=" valor2 = $event.target.value"><span>Custo</span>
+    <button (click)="onClick()">Salvar</button>
+    
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">Custo</th>
         </tr>
-      
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <tr *ngFor="let registro of registros | async">
+          <td>Nome:{{registro.valor1}}</td>
+          <td>Custo:{{registro.valor2}}</td>
+          <td>Codigo:{{registro.key}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+
+    <h4>Sacola</h4>
+    <input type="text" (input)=" codigo = $event.target.value"><span>Codigo</span>
+    <button (click)="onAdd(codigo)">Adicionar</button>
+    
+    <h6>Total: </h6>
+    <h6>Numero de Items: {{total}} </h6>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">Custo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let registro2 of registros2 | async">
+          <td>Nome:{{registro2.valor1}}</td>
+          <td>Custo:{{registro2.valor2}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

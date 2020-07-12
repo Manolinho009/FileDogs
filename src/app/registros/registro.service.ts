@@ -12,21 +12,21 @@ export class RegistroService {
   constructor(private db: AngularFireDatabase) { }
 
   insert(registro : Registro){
-    this.db.list('registro').push(registro)
+    this.db.list('registro/produto').push(registro)
     .then((result : any ) =>{
       console.log(result.key);
     })
   }
 
   getAll(){
-    return this.db.list('registro').snapshotChanges().pipe(
+    return this.db.list('registro/produto').snapshotChanges().pipe(
       map(changes => {
         return changes.map(c =>({ key : c.payload.key, ...(c.payload.val() as {})}))
       })
     )
   }
 
-  delete(key : String){
-    this.db.object(`registros/${key}`).remove()
+  find(key : String,registro : Registro){
+    this.db.list(`registros/produto/${key}`).push(registro)
   }
 }
