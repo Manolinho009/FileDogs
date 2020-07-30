@@ -21,8 +21,10 @@
     "@angular/platform-browser-dynamic": "~9.0.6",
     "@angular/router": "~9.0.6",
     "bootstrap": "^4.4.1",
+    "codemirror": "^5.56.0",
     "firebase": "^7.10.0",
     "jquery": "^3.4.1",
+    "ng2-ace-editor": "^0.3.9",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

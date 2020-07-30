@@ -1,0 +1,27 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h3 class="display-3">GetElementByClassName</h3>
+        <hr class="my-4">
+
+        <p>
+          Volta um vetor de objetos com todos elementos filhos que tem nome. <br>
+           Quando, é definido no objeto e examinado por completo. Podendo ser chamado também getElementsByClassName() em qualquer elemento; <br>
+            isso retornaria  só os  elementos que são descendentes do especificado com o nome da classe.
+
+        </p>
+
+        <div id="div" 
+        ace-editor
+          [(text)]="text" 
+          [mode]="'js'" 
+          [theme]="'eclipse'"
+          [options]="options"
+          [readOnly]="false"
+          [autoUpdateContent]="true"
+          [durationBeforeCallback]="1000" 
+          (textChanged)="onChange($event)"
+          #editor
+          style="min-height: 200px; width:100%; overflow: auto;"></div>
+
+    </div>
+</div>

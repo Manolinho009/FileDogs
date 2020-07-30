@@ -1,0 +1,31 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h3 class="display-3">createElement</h3>
+        <hr class="my-4">
+
+        <p>
+            A função createElement() irá criar um elemento HTML para ser, posteriormente, inserido em um documento HTML. <br>
+            Veja a sintaxe da função: <br>
+            <br>
+            var element = document.createElement(tagName);<br>
+            <br>
+            tagName é uma string que especifica o tipo do elemento, é uma tag HTML. <br>
+            element é o objeto criado e retornado pela função. <br>
+            
+        </p>
+
+        <div id="div" 
+        ace-editor
+          [(text)]="text" 
+          [mode]="'js'" 
+          [theme]="'eclipse'"
+          [options]="options"
+          [readOnly]="false"
+          [autoUpdateContent]="true"
+          [durationBeforeCallback]="1000" 
+          (textChanged)="onChange($event)"
+          #editor
+          style="min-height: 200px; width:100%; overflow: auto;"></div>
+
+    </div>
+</div>

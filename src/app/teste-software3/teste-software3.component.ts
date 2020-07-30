@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-teste-software2',
-  templateUrl: './teste-software2.component.html',
-  styleUrls: ['./teste-software2.component.css']
+  selector: 'app-teste-software3',
+  templateUrl: './teste-software3.component.html',
+  styleUrls: ['./teste-software3.component.css']
 })
-export class TesteSoftware2Component implements OnInit {
+export class TesteSoftware3Component implements OnInit {
 
   constructor() { }
-
   ngOnInit(){
   }
 
@@ -49,14 +48,6 @@ export class TesteSoftware2Component implements OnInit {
 
   }
 
-  imc(){
-    var a = parseFloat(this.altura) * parseFloat(this.altura) 
-    var b = parseFloat(this.peso)
-    var c = b/a
-
-  document.getElementById("result").innerHTML = "Resultado :"+c
-  }
-
   potencia(){
 
     var valor = parseFloat(this.peso) * parseFloat(this.preco)
@@ -64,4 +55,3 @@ export class TesteSoftware2Component implements OnInit {
     document.getElementById("preco").innerHTML = "Total : "+valor + this.unidade
   }
 }
-

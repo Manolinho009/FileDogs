@@ -1,0 +1,54 @@
+
+<!-- 
+
+<div class="jumbotron jumbotron-fluid">
+    <div  class="container">
+
+        <input class="form-control"  type="text" placeholder="Nome do Jogador">
+
+        <hr class="my-4">
+        <div class="mb-4">
+            <input class="form-control"  type="text" placeholder="Nome do campo" (input)=" campo = $event.target.value">
+            <button class="btn btn-primary my-2" (click)="add()">Novo Campo</button>
+        </div>
+
+        <ul id="inputs" class="list-group">
+            <li id="base" class="list-group-item"><input type="text" name="1" placeholder="Nome Player" class="form-control inputtiti" ></li>
+        </ul>
+      
+        <button class="btn btn-danger mt-3" (click)="insert()">Salvar</button>
+    </div>
+  </div> -->
+
+  
+
+<div class="jumbotron jumbotron-fluid">
+    <div  class="container">
+
+        <input class="form-control" required type="text" [(ngModel)]="nome_jogador" placeholder="Nome do Jogador">
+        
+        <form class="container" >
+            <section>
+        
+                <hr class="my-4">
+                <div class="container">
+                    <div class="row" *ngFor="let entrada of lista_campos; let i = index; ">
+                        <div class="col-5">
+                            <input type="text" required name="Campo_{{entrada.id}}" [(ngModel)]="entrada.campo "placeholder="Nome Do Campo" class="form-control inputtiti col my-3" >
+                        </div>
+                        <div class="col-5">
+                            <input type="text" required name="Valor_{{entrada.id}}" [(ngModel)]="entrada.valor" placeholder="Valor"  class="form-control inputtiti col my-3" >
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-danger mt-3" (click)="remover(i)">Excluir</button>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-primary mt-3 mr-3" (click)="log()">console Log</button>
+                <button type="button" class="btn btn-primary mt-3 mr-3" (click)="add()">Novo Campo</button>
+                <button class="btn btn-danger mt-3" (click)="insert()">Salvar</button>
+            </section>
+        </form>
+    </div>
+  </div>

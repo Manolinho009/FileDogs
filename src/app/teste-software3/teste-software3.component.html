@@ -1,0 +1,117 @@
+<div class="jumbotron jumbotron-fluid">
+    
+    <div class="container ">
+        <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nome</label>
+              <input type="text" required="required" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu Nome">
+            </div>
+        
+            <div class="form-group">
+              <label for="exampleInputPassword1">Sobrenome</label>
+              <input type="text" required="required" class="form-control" id="exampleInputPassword1" placeholder="Sobrenome">
+            </div>
+        
+            <div class="form-group">
+                <label for="exampleInputPassword1">Sua idade</label>
+                <input type="number" required="required" class="form-control" id="exampleInputPassword1" placeholder="Idade">
+            </div>
+        
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+
+    </div>
+
+</div>
+
+<div class="jumbotron jumbotron-fluid bg-dark">
+    
+    <div class="container table-responsive-lg">
+        
+        <table class="table  table-bordered table-striped table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Tabela</th>
+                <th scope="col">Codigo</th>
+                <th scope="col">Procedencia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"># Norte</th>
+                <td>1</td>
+                <td>Fazenda</td>
+              </tr>
+              <tr>
+                <th scope="row"># Sul</th>
+                <td>2</td>
+                <td>Mercado</td>
+              </tr>
+              <tr>
+                <th scope="row"># Leste</th>
+                <td>3</td>
+                <td>China</td>
+              </tr>
+              <tr>
+                <th scope="row"># Oeste</th>
+                <td>4</td>
+                <td>Lugares legais</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class=" h2" id="textolegal"></div>
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <button class="btn btn-outline-secondary" (click)="procedencia()"  type="button" id="button-addon1">Enviar</button>
+            </div>
+            <input type="text" (input)=" codigo = $event.target.value" class="form-control bg-dark" placeholder="" aria-label="Codigo de produto" aria-describedby="button-addon1">
+          </div>
+
+    </div>
+</div>
+
+
+<div class="jumbotron jumbotron-fluid  ">
+    
+  <div class="container ">
+      <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Nome do Prato</label>
+            <input type="text" required="required"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome">
+          </div>
+      
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">R$</span>
+            </div>
+            <input  required="required" (input)=" preco = $event.target.value" type="number" class="form-control" aria-label="Quantia">
+            <div class="input-group-append">
+              <span class="input-group-text">.00</span>
+            </div>
+          </div>
+          
+      
+          <div class="form-group">
+              <label for="exampleInputPassword1">Unidade de Medida</label> <br>
+              <input type="radio" required="required" value="kg" (input)=" unidade = $event.target.value" NAME="OPCAO" id="exampleInputPassword1" placeholder="Kg">Kg <br>
+              <input type="radio" required="required" value="lb" (input)=" unidade = $event.target.value" NAME="OPCAO" id="exampleInputPassword1" placeholder="Lb">Lb <br>
+              <input type="radio" required="required" value="russo" (input)=" unidade = $event.target.value" NAME="OPCAO" id="exampleInputPassword1" placeholder="фунт">фунт
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Peso</label>
+            <input type="number" required="required" (input)=" peso = $event.target.value" class="form-control" id="exampleInputPassword1" placeholder="Peso">
+        </div>
+      
+        <div class="my-4" id="preco">Total: </div>
+
+        <button type="reset" class="btn btn-primary">Limpar</button>
+        <button type="button" (click)="potencia()" class="btn btn-primary">Calcular</button>
+      </form>
+
+  </div>
+
+</div>
+

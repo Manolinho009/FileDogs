@@ -1,0 +1,51 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h3 class="display-3">GetElementByID</h3>
+        <hr class="my-4">
+
+        <p>
+            Método utilizado para acessar um elemento por meio do seu ID, o qual é definido por meio do atributo id na parte do html. <br>
+        EX: let elemento=document.getElementByID(‘input’) <br>
+        Sendo: <br>
+        Elemento: Usa referência ao element, ou pode ser ainda null se o id não foi especificado previamente. <br>
+        ID:String que diferencia letras maiúsculas e minusculas e maiusculas, a qual e representada por um ID único do elemento desejado.
+        </p>
+
+        <div id="div" 
+        ace-editor
+          [(text)]="text" 
+          [mode]="'js'" 
+          [theme]="'eclipse'"
+          [options]="options"
+          [readOnly]="false"
+          [autoUpdateContent]="true"
+          [durationBeforeCallback]="1000" 
+          (textChanged)="onChange($event)"
+          #editor
+          style="min-height: 200px; width:100%; overflow: auto;"></div>
+
+          <button data-toggle="modal" data-target="#modalExemplo" type="button" class="btn btn-danger mt-2">Tente Você</button>
+    </div>
+</div>
+
+
+<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Exmplo GetElementByID </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div id="modal" class="modal-body">
+            <input type="text" [(ngModel)]="nome" placeholder="Seu Nome" class="form-control" name="nome" id="nome">
+
+            <button type="button" (click)="logar()" class="btn btn-dark mt-2">Salvar</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>

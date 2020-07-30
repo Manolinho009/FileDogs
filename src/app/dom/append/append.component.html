@@ -1,0 +1,26 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h3 class="display-3">appendChild</h3>
+        <hr class="my-4">
+
+        <p>
+           
+            A função appendChild() serve para re-posicionar  um filho que é uma referência ao a um nó existente no documento, sendo removido do nó atual antes de ser adicionado ao novo pai.
+
+        </p>
+
+        <div id="div" 
+        ace-editor
+          [(text)]="text" 
+          [mode]="'js'" 
+          [theme]="'eclipse'"
+          [options]="options"
+          [readOnly]="false"
+          [autoUpdateContent]="true"
+          [durationBeforeCallback]="1000" 
+          (textChanged)="onChange($event)"
+          #editor
+          style="min-height: 200px; width:100%; overflow: auto;"></div>
+
+    </div>
+</div>
