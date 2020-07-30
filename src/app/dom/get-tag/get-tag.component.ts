@@ -20,7 +20,7 @@ export class GetTagComponent implements OnInit {
 
   onChange(code) {
     console.log("new code", code);
-}
+  }
 
   ngAfterViewInit() {
     this.editor.setTheme("dracula");

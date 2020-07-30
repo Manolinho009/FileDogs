@@ -37,6 +37,7 @@ import { QueryComponent } from './dom/query/query.component';
 import { ElementComponent } from './dom/element/element.component';
 import { AppendComponent } from './dom/append/append.component';
 import { QuestoesComponent } from './dom/questoes/questoes.component';
+import { GustavoFichaComponent } from './gustavo/gustavo-ficha/gustavo-ficha.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { QuestoesComponent } from './dom/questoes/questoes.component';
     QueryComponent,
     ElementComponent,
     AppendComponent,
-    QuestoesComponent
+    QuestoesComponent,
+    GustavoFichaComponent
   ],
   imports: [
     BrowserModule,

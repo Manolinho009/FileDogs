@@ -22,6 +22,7 @@ import { QueryComponent } from './dom/query/query.component';
 import { ElementComponent } from './dom/element/element.component';
 import { AppendComponent } from './dom/append/append.component';
 import { QuestoesComponent } from './dom/questoes/questoes.component';
+import { GustavoFichaComponent } from './gustavo/gustavo-ficha/gustavo-ficha.component';
 
 const routes: Routes = [
   { path: 'salas' , component: SalasComponent},
@@ -34,7 +35,8 @@ const routes: Routes = [
   { path: 'teste3', component: TesteSoftware3Component},
   { path: 'lampada', component: LampadaComponent},
   { path: 'gustavo', component: GustavoComponent},
-  { path: 'listagustavo', component: ListGustavoComponent},
+  { path: 'gustavo/lista', component: ListGustavoComponent},
+  { path: 'gustavo/lista/player', component: GustavoFichaComponent},
   { path: 'dom', component: DOMComponent},
   { path: 'dom/getid', component: GetIdComponent},
   { path: 'dom/gettag', component: GetTagComponent},
