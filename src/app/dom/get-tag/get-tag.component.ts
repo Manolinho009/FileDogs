@@ -9,7 +9,12 @@ export class GetTagComponent implements OnInit {
 
   nome:any
   options:any = {maxLines: 1000, printMargin: false};
-  public text:string = "texto"
+  public text:string = "function ver(){\n"+
+    "var x = document.getElementsByTagName('P');\n"+
+    "var i;\n"+
+    "for (i = 0; i < x.length; i++) {\n"+
+      "x[i].style.backgroundColor = 'red';\n"+
+    "}"
 
 
   constructor() { }

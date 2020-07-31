@@ -38,6 +38,7 @@ import { ElementComponent } from './dom/element/element.component';
 import { AppendComponent } from './dom/append/append.component';
 import { QuestoesComponent } from './dom/questoes/questoes.component';
 import { GustavoFichaComponent } from './gustavo/gustavo-ficha/gustavo-ficha.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import { GustavoFichaComponent } from './gustavo/gustavo-ficha/gustavo-ficha.com
     AngularFireDatabaseModule,
     AngularFirestoreModule,
     FormsModule ,
-    AceEditorModule
+    AceEditorModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

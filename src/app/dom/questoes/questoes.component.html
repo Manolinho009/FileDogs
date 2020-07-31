@@ -5,52 +5,260 @@
     </div>
 </div>
 
-  <div id="carouselExampleIndicators" class="carousel slide bg-dark" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-
-
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
+<div class="container">
+  <div class="row">
+    <form #myForm="ngForm" class="mx-auto" (submit)="submitForm(myForm)" novalidate> 
+      <div class="jumbotron jumbotron-fluid" style="border-radius: 30pt;">
         <div class="container">
-            <div class="row">
-                
-                <div class="col my-4"
-                id="div" 
-                ace-editor
-                [(text)]="text" 
-                [mode]="'js'" 
-                [theme]="'eclipse'"
-                [options]="options"
-                [readOnly]="false"
-                [autoUpdateContent]="true"
-                [durationBeforeCallback]="1000" 
-                (textChanged)="onChange($event)"
-                style="min-height: 145px; width:50%; overflow: auto;"></div>
-                <span class="col" style="color: white;">"Crie uma lista ordenada e use selecioone ele usando um id = 'lista' <br>
-                "EX: &#60;ol id="lista"&#62; &#60;/ol&#62;  <br> & var i = document.getElementById('lista') "</span>
-                
-            </div>
+          <h1 class="display-4">Exercicio 1:</h1>
+          <hr class="my-4">
+          <p> Qual metodo DOM utilizamos para fazer a seleção de um elemento por meio de um ID?</p>
+          
+          <br>
+  
+          <div class="form-check ml-3">
+            <input class="form-check-input" ngModel required type="radio" name="exampleRadios" id="exampleRadios1" value="1">
+            <label class="form-check-label" for="1" id="1">
+              GetElementById('')
+            </label>
+          </div>
+  
+          <br>
+  
+          <div class="form-check ml-3">
+            <input class="form-check-input" ngModel required type="radio" name="exampleRadios" id="exampleRadios1" value="2">
+            <label class="form-check-label" for="2"  id="2">
+              getElementByTagName('')
+            </label>
+          </div>
+  
+          <br>
+  
+          <div class="form-check ml-3">
+            <input class="form-check-input" ngModel required type="radio" name="exampleRadios" id="exampleRadios1" value="3">
+            <label class="form-check-label" for="3"  id="3">
+              Document.querySelector('')
+            </label>
+          </div>
+  
+          <br>
+  
+          <div class="form-check ml-3">
+            <input class="form-check-input" ngModel required type="radio" name="exampleRadios" id="exampleRadios1" value="certo">
+            <label class="form-check-label" for="certo"  id="certo">
+              Document.getElementById('')
+            </label>
+          </div>
+          
+          <br>
+          
+          <button type="submit" class="btn btn-dark float-right btn-lg mr-4">Enviar</button>
         </div>
       </div>
-      <div class="carousel-item">
-        
+    </form>
+  </div>
+
+  <div class="row">
+    <form #myForm2="ngForm" class="mx-auto" (submit)="submitForm(myForm2)" novalidate> 
+      <div class="jumbotron jumbotron-fluid mx-auto" style="border-radius: 30pt;">
+        <div class="container">
+          <h1 class="display-4">Exercicio 2:</h1>
+          <hr class="my-4">
+          <p> Qual metodo DOM utilizamos para fazer a seleção um array de elementos atraves <br>  de uma Class?</p>
+          
+          <br>
+  
+          <div class="form-check ml-3">
+            <input class="form-check-input" ngModel required  type="radio" name="exampleRadios" id="exampleRadios1" value="1">
+            <label class="form-check-label" id="1" for="1">
+              getElementByTagName('')
+            </label>
+          </div>
+  
+          <br>
+  
+          <div class="form-check ml-3">
+            <input class="form-check-input" ngModel required  type="radio" name="exampleRadios" id="exampleRadios1" value="certo">
+            <label class="form-check-label" id="certo" for="certo">
+              Document.getElementByClassName('')
+            </label>
+          </div>
+  
+          <br>
+  
+          <div class="form-check ml-3">
+            <input class="form-check-input" ngModel required  type="radio" name="exampleRadios" id="exampleRadios1" value="2">
+            <label class="form-check-label" id="3" for="3">
+              Document.createArrayObjectFromClass('')
+            </label>
+          </div>
+  
+          <br>
+  
+          <div class="form-check ml-3">
+            <input class="form-check-input" ngModel required  type="radio" name="exampleRadios" id="exampleRadios1" value="3">
+            <label class="form-check-label" id="4" for="4">
+              Document.createChield('')
+            </label>
+          </div>
+          
+          <br>
+          
+          <button type="submit" class="btn btn-dark float-right btn-lg mr-4">Enviar</button>
+        </div>
       </div>
-      <div class="carousel-item">
-        
+    </form>
+  </div>
+
+  <div class="row">
+    <form #myForm3="ngForm" class="mx-auto" (submit)="submitForm(myForm3)" novalidate> 
+      <div class="jumbotron jumbotron-fluid mx-auto" style="border-radius: 30pt;">
+        <div class="container">
+          <h1 class="display-4">Exercicio 3:</h1>
+          <hr class="my-4">
+          <p> Qual metodo DOM utilizamos para retornar um coleção de elementos por uma Tag ?</p>
+          
+          <br>
+  
+          <div class="form-check ml-3">
+            <input class="form-check-input"  ngModel required  type="radio" name="exampleRadios" id="exampleRadios1" value="1">
+            <label class="form-check-label" id="1" for="1">
+              getElementByTagName('')
+            </label>
+          </div>
+  
+          <br>
+  
+          <div class="form-check ml-3">
+            <input class="form-check-input"  ngModel required  type="radio" name="exampleRadios" id="exampleRadios1" value="2">
+            <label class="form-check-label" id="2" for="2">
+              Document.getTagColection('')
+            </label>
+          </div>
+  
+          <br>
+  
+          <div class="form-check ml-3">
+            <input class="form-check-input"  ngModel required  type="radio" name="exampleRadios" id="exampleRadios1" value="3">
+            <label class="form-check-label" id="3" for="3">
+              Document.createTagColection('')
+            </label>
+          </div>
+  
+          <br>
+  
+          <div class="form-check ml-3">
+            <input class="form-check-input"  ngModel required  type="radio" name="exampleRadios" id="exampleRadios1" value="certo">
+            <label class="form-check-label" id="certo" for="certo">
+              Document.getElementByTagName('')
+            </label>
+          </div>
+          
+          <br>
+          
+          <button type="submit" class="btn btn-dark float-right btn-lg mr-4">Enviar</button>
+        </div>
       </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Anterior</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Próximo</span>
-    </a>
+    </form>
+  </div>
+
+  <div class="row">
+    <form #myForm4="ngForm" class="mx-auto" (submit)="submitForm(myForm4)" novalidate> 
+      <div class="jumbotron jumbotron-fluid mx-auto" style="border-radius: 30pt; width: 650px;">
+        <div class="container">
+          <h1 class="display-4">Exercicio 4:</h1>
+          <hr class="my-4">
+          <p>Verifique se o codigo abaixo está certo ou não</p>
+          
+          <div id="div" 
+            ace-editor
+            [(text)]="text" 
+            [mode]="'js'" 
+            [theme]="'eclipse'"
+            [options]="options"
+            [readOnly]="true"
+            [autoUpdateContent]="true"
+            [durationBeforeCallback]="1000" 
+            (textChanged)="onChange($event)"
+            #editor
+            style="min-height: 200px; width:100%; overflow: auto;"></div>
+  
+          <br>
+  
+          <div class="form-check ml-3">
+            <input class="form-check-input" ngModel required  type="radio" name="exampleRadios" id="exampleRadios1" value="1">
+            <label class="form-check-label" id="1" for="1">
+              Funciona
+            </label>
+          </div>
+  
+          <br>
+  
+          <div class="form-check ml-3">
+            <input class="form-check-input" ngModel required  type="radio" name="exampleRadios" id="exampleRadios1" value="certo">
+            <label class="form-check-label" id="certo" for="certo">
+              Não Funciona
+            </label>
+          </div>
+          
+          <br>
+          
+          <button type="submit" class="btn btn-dark float-right btn-lg mr-4">Enviar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="row">
+    <form #myForm5="ngForm" class="mx-auto" (submit)="submitForm(myForm5)" novalidate> 
+
+      <div class="jumbotron jumbotron-fluid mx-auto"  style="border-radius: 30pt; width: 650px;">
+        <div class="container">
+          <h1 class="display-4">Exercicio 5:</h1>
+          <hr class="my-4">
+          <p>Quais desses são comandos DOM?</p>
+          
+          <br>
+  
+          <div class="form-check ml-3">
+            <input class="form-check-input" ngModel required  type="radio" name="exampleRadios" id="exampleRadios1" value="certo">
+            <label class="form-check-label" id="certo" for="certo">
+              Document.getElementByClassName('')
+            </label>
+          </div>
+  
+          <br>
+  
+          <div class="form-check ml-3">
+            <input class="form-check-input" ngModel required  type="radio" name="exampleRadios" id="exampleRadios1" value="1">
+            <label class="form-check-label" id="1" for="1">
+              Document.getTagColection('')
+            </label>
+          </div>
+  
+          <br>
+  
+          <div class="form-check ml-3">
+            <input class="form-check-input" ngModel required  type="radio" name="exampleRadios" id="exampleRadios1" value="2">
+            <label class="form-check-label" id="2" for="1">
+              Document.createTagColection('')
+            </label>
+          </div>
+  
+          <br>
+  
+          <div class="form-check ml-3">
+            <input class="form-check-input" ngModel required  type="radio" name="exampleRadios" id="exampleRadios1" value="3">
+            <label class="form-check-label" id="3" for="3">
+              Document.getElementByTagNameFromColection('')
+            </label>
+          </div>
+          
+          <br>
+          
+          <button type="submit" class="btn btn-dark float-right btn-lg mr-4">Enviar</button>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
-
-

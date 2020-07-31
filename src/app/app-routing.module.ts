@@ -48,7 +48,7 @@ const routes: Routes = [
   { path: 'ifs' , component: IfsComponent},
   { path: 'login' , component: LoginComponent},
   { path: '' , 
-  redirectTo: 'teste2',
+  redirectTo: 'dom',
   pathMatch: 'full'}
 ];
 
