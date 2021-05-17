@@ -1,3 +1,7 @@
+# Descrição
+
+Basicamente apenas um site feito em Angular CLI + Firebase para gerenciar meus trabalhos e provas de escola
+
 # FileDog
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
